@@ -1,0 +1,14 @@
+{
+	"name": "SQLDW2_test",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "sqldw2",
+			"type": "LinkedServiceReference"
+		},
+		"type": "AzureSqlDWTable",
+		"typeProperties": {
+			"tableName": "[dbo].[test]"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

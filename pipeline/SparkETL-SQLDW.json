@@ -1,0 +1,66 @@
+{
+	"name": "SparkETL-SQLDW",
+	"properties": {
+		"activities": [
+			{
+				"name": "Blob-to-ADLS",
+				"type": "Copy",
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false
+				},
+				"typeProperties": {
+					"source": {
+						"type": "BlobSource",
+						"recursive": true
+					},
+					"sink": {
+						"type": "AzureDataLakeStoreSink"
+					},
+					"enableStaging": false,
+					"dataIntegrationUnits": 0
+				},
+				"inputs": [
+					{
+						"referenceName": "tempblobstorage_radio",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "ADLS1",
+						"type": "DatasetReference"
+					}
+				]
+			},
+			{
+				"name": "ETL_Databricks_SQLDW",
+				"type": "DatabricksNotebook",
+				"dependsOn": [
+					{
+						"activity": "Blob-to-ADLS",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false
+				},
+				"typeProperties": {
+					"notebookPath": "/Users/matakeda@microsoft.com/samplenotebook"
+				},
+				"linkedServiceName": {
+					"referenceName": "dbws_premium",
+					"type": "LinkedServiceReference"
+				}
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

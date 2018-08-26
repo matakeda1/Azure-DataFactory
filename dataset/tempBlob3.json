@@ -1,0 +1,33 @@
+{
+	"name": "tempBlob3",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "TempBlobStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"type": "AzureBlob",
+		"structure": [
+			{
+				"name": "Prop_0",
+				"type": "String"
+			},
+			{
+				"name": "Prop_1",
+				"type": "String"
+			}
+		],
+		"typeProperties": {
+			"format": {
+				"type": "TextFormat",
+				"columnDelimiter": "|",
+				"rowDelimiter": "",
+				"treatEmptyAsNull": true,
+				"skipLineCount": 0,
+				"firstRowAsHeader": false
+			},
+			"fileName": "inputEmp.txt",
+			"folderPath": "container3"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

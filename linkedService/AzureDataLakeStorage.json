@@ -1,0 +1,13 @@
+{
+	"name": "AzureDataLakeStorage",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"type": "AzureDataLakeStore",
+		"typeProperties": {
+			"dataLakeStoreUri": "https://mydatastorefordatabricks.azuredatalakestore.net/webhdfs/v1",
+			"tenant": "f0e66588-3d18-4097-84a3-23ca7fd53b26",
+			"subscriptionId": "f0e66588-3d18-4097-84a3-23ca7fd53b26",
+			"resourceGroupName": "dbrg"
+		}
+	}
+}

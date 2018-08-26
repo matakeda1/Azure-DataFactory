@@ -1,0 +1,24 @@
+{
+	"name": "tempblobstorage_radio",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "tempblobstorage_radio",
+			"type": "LinkedServiceReference"
+		},
+		"type": "AzureBlob",
+		"typeProperties": {
+			"format": {
+				"type": "TextFormat",
+				"columnDelimiter": ",",
+				"rowDelimiter": "",
+				"nullValue": "\\N",
+				"treatEmptyAsNull": true,
+				"skipLineCount": 0,
+				"firstRowAsHeader": false
+			},
+			"fileName": "small_radio_json.json",
+			"folderPath": "radiodata"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

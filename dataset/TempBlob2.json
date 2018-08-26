@@ -1,0 +1,24 @@
+{
+	"name": "TempBlob2",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "TempBlobStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"type": "AzureBlob",
+		"typeProperties": {
+			"format": {
+				"type": "TextFormat",
+				"columnDelimiter": ",",
+				"rowDelimiter": "",
+				"nullValue": "\\N",
+				"treatEmptyAsNull": true,
+				"skipLineCount": 0,
+				"firstRowAsHeader": false
+			},
+			"fileName": "empname.txt",
+			"folderPath": "container3"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

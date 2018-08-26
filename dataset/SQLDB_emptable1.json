@@ -1,0 +1,14 @@
+{
+	"name": "SQLDB_emptable1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "SQLDB1",
+			"type": "LinkedServiceReference"
+		},
+		"type": "AzureSqlTable",
+		"typeProperties": {
+			"tableName": "[dbo].[empname]"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

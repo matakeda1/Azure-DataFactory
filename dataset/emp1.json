@@ -1,0 +1,24 @@
+{
+	"name": "emp1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "sqldbmart6",
+			"type": "LinkedServiceReference"
+		},
+		"type": "AzureSqlTable",
+		"structure": [
+			{
+				"name": "FirstName",
+				"type": "String"
+			},
+			{
+				"name": "LastName",
+				"type": "String"
+			}
+		],
+		"typeProperties": {
+			"tableName": "[dbo].[emp]"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
