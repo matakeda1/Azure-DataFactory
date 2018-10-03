@@ -1,0 +1,23 @@
+{
+	"name": "tempblobstorage1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "tempblobstorage1_linkedservice",
+			"type": "LinkedServiceReference"
+		},
+		"type": "AzureBlob",
+		"typeProperties": {
+			"format": {
+				"type": "TextFormat",
+				"columnDelimiter": ",",
+				"rowDelimiter": "",
+				"nullValue": "\\N",
+				"treatEmptyAsNull": true,
+				"skipLineCount": 0,
+				"firstRowAsHeader": false
+			},
+			"fileName": "small_radio_json.json",
+			"folderPath": "radiodata"
+		}
+	}
+}
