@@ -1,0 +1,16 @@
+{
+	"name": "SqlServerLinkedService",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"type": "SqlServer",
+		"typeProperties": {
+			"connectionString": "integrated security=True;data source=MATAKEDA01\\MSSQLSRV;initial catalog=NorthwindJ",
+			"userName": "matakeda@microsoft.com",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiIzMTUwMGJjNy0yN2Y3LTRjZTctYjI0MS00NWFhZDgxZTg0MzQiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "integrationRuntime1",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}
