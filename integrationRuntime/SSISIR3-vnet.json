@@ -1,0 +1,31 @@
+{
+	"name": "SSISIR3-vnet",
+	"properties": {
+		"type": "Managed",
+		"typeProperties": {
+			"computeProperties": {
+				"location": "Southeast Asia",
+				"nodeSize": "Standard_D3_v2",
+				"numberOfNodes": 1,
+				"maxParallelExecutionsPerNode": 4,
+				"vNetProperties": {
+					"vNetId": "/subscriptions/f0e66588-3d18-4097-84a3-23ca7fd53b26/resourceGroups/dbrg/providers/Microsoft.Network/virtualNetworks/dbrg-vnet",
+					"subnet": "default"
+				}
+			},
+			"ssisProperties": {
+				"catalogInfo": {
+					"catalogServerEndpoint": "sqldb8srv.database.windows.net",
+					"catalogAdminUserName": "Admin1",
+					"catalogAdminPassword": {
+						"type": "SecureString",
+						"value": "**********"
+					},
+					"catalogPricingTier": "Basic"
+				},
+				"edition": "Enterprise",
+				"licenseType": "BasePrice"
+			}
+		}
+	}
+}
